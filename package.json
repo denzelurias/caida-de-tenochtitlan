@@ -1,0 +1,12 @@
+{
+  "name": "google-art-tenochtitlan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check assets/js/main.js && node --check assets/js/annotations.js && node --check api/annotations/index.js && node --check api/annotations/[id].js && node --check lib/db.js"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

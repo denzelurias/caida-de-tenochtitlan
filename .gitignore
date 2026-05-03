@@ -1,4 +1,7 @@
 .DS_Store
+.env
+.env.local
 .codex-screenshots/
 .rollback/
 .vercel
+stitch_tenochtitlan_cr_nica_visual/

@@ -1,0 +1,14 @@
+.DS_Store
+.codex-screenshots/
+.rollback/
+.git/
+.github/
+.env
+.env.*
+AGENTS.md
+DESIGN.md
+PLAN_ANOTACIONES.md
+docs/
+supabase/
+stitch_tenochtitlan_cr_nica_visual/
+Investigación Tenochtitlan.docx

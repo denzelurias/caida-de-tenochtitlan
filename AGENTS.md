@@ -9,6 +9,11 @@ Static editorial web experience about Mexico-Tenochtitlan and the fall of 1521. 
 - `index.html`: semantic page structure and content only.
 - `assets/css/styles.css`: visual system, responsive layout, placeholders, animations.
 - `assets/js/main.js`: menu, scroll effects, timeline, map pins, gallery modal.
+- `assets/js/annotations.js`: comment mode, composer, note markers, panel, local fallback.
+- `api/annotations/`: Vercel Functions for annotation GET, POST, and moderated DELETE.
+- `lib/db.js`: server-only Supabase REST helper. Never import it from frontend code.
+- `supabase/migrations/20260503044933_create_annotation_system.sql`: tables, RLS, policies, indexes, and seed row for annotations.
+- `docs/annotations.md`: deployment and maintenance notes for the annotation system.
 - `assets/img/`: future image assets and map backgrounds.
 - `stitch_tenochtitlan_cr_nica_visual/`: original visual reference prototypes. Do not edit unless explicitly asked.
 - `Investigación Tenochtitlan.docx`: source research document. Treat it as the historical content source.
@@ -22,6 +27,9 @@ Static editorial web experience about Mexico-Tenochtitlan and the fall of 1521. 
 - Use the `DESIGN.md` palette as the color source of truth: near-white archive surfaces, deep burgundy, parchment, stone, and earth tones.
 - Avoid adding duplicated navigation. The top bar opens the single index drawer.
 - Verify that all `href="#..."` anchors point to existing IDs after edits.
+- Preserve existing `data-anchor-id` values once comments have been published. If an anchor is removed or renamed, document the migration.
+- Never expose Supabase service/secret keys in browser code. Writes go through `/api/annotations`.
+- Render user comments with `textContent`, not `innerHTML`.
 
 ## Map Background
 

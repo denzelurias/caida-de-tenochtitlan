@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Interactive Map - The Valley of Mexico 1519</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary-fixed": "#000767",
+                "surface-dim": "#efd4d0",
+                "on-secondary-fixed-variant": "#343d96",
+                "surface-container-low": "#fff0ee",
+                "surface-container": "#ffe9e6",
+                "on-primary-fixed-variant": "#920703",
+                "inverse-primary": "#ffb4a8",
+                "primary-container": "#8b0000",
+                "background": "#fff8f6",
+                "inverse-on-surface": "#ffedea",
+                "on-surface": "#261816",
+                "primary": "#610000",
+                "primary-fixed": "#ffdad4",
+                "secondary-fixed": "#e0e0ff",
+                "on-background": "#261816",
+                "secondary": "#4c56af",
+                "on-error-container": "#93000a",
+                "surface-bright": "#fff8f6",
+                "surface": "#fff8f6",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#dfe0ff",
+                "on-secondary-container": "#27308a",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed": "#000d60",
+                "on-primary-container": "#ff907f",
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#959efd",
+                "on-secondary": "#ffffff",
+                "surface-container-highest": "#f8dcd8",
+                "on-tertiary-fixed-variant": "#0d2ccc",
+                "on-tertiary-container": "#9ea9ff",
+                "secondary-fixed-dim": "#bdc2ff",
+                "on-primary-fixed": "#410000",
+                "on-primary": "#ffffff",
+                "outline-variant": "#e3beb8",
+                "inverse-surface": "#3d2c2a",
+                "surface-container-high": "#fee2dd",
+                "surface-variant": "#f8dcd8",
+                "tertiary-container": "#0025c8",
+                "tertiary": "#00178d",
+                "primary-fixed-dim": "#ffb4a8",
+                "on-surface-variant": "#5a403c",
+                "tertiary-fixed-dim": "#bcc3ff",
+                "outline": "#8e706b",
+                "on-tertiary": "#ffffff",
+                "surface-tint": "#b52619"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "section-gap": "120px",
+                "gutter": "32px",
+                "margin-edge": "64px",
+                "unit": "8px",
+                "container-max": "1280px"
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "Noto Serif"
+                ],
+                "body-lg": [
+                        "Work Sans"
+                ],
+                "headline-display": [
+                        "Noto Serif"
+                ],
+                "headline-md": [
+                        "Noto Serif"
+                ],
+                "label-sm": [
+                        "Work Sans"
+                ],
+                "body-md": [
+                        "Work Sans"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-display": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md h-screen w-screen overflow-hidden flex flex-col">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-8 py-4 sticky top-0 z-50 bg-[#EAD7B1] border-b border-outline-variant">
+<div class="flex items-center gap-8">
+<h1 class="text-2xl font-serif font-bold text-primary font-headline-md text-headline-md">Tenochtitlan: The Fall</h1>
+<nav class="hidden md:flex gap-6">
+<a class="text-on-surface-variant font-serif hover:text-primary transition-colors duration-300" href="#">Timeline</a>
+<a class="text-on-surface-variant font-serif hover:text-primary transition-colors duration-300" href="#">Empire</a>
+<a class="text-on-surface-variant font-serif hover:text-primary transition-colors duration-300" href="#">The Siege</a>
+<a class="text-on-surface-variant font-serif hover:text-primary transition-colors duration-300" href="#">Legacy</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<button aria-label="Translate" class="hover:text-primary/80 transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="translate">translate</span>
+</button>
+<button aria-label="Menu" class="hover:text-primary/80 transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden relative">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full z-40 hidden md:flex flex-col pt-20 w-64 border-r rounded-none border-outline-variant bg-[#EAD7B1]">
+<div class="px-6 py-8 mb-4">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Chronicle Index</h2>
+<p class="font-body-md text-body-md text-on-surface-variant italic">An Academic Digital Narrative</p>
+</div>
+<ul class="flex flex-col gap-2 w-full pr-4">
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 font-serif text-sm uppercase tracking-widest hover:bg-primary/10 hover:text-primary transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined" data-icon="castle">castle</span>
+                        The Mexica Empire
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 font-serif text-sm uppercase tracking-widest hover:bg-primary/10 hover:text-primary transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined" data-icon="sailing">sailing</span>
+                        Spanish Arrival
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 font-serif text-sm uppercase tracking-widest hover:bg-primary/10 hover:text-primary transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+                        Broken Spears
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 font-serif text-sm uppercase tracking-widest hover:bg-primary/10 hover:text-primary transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+                        Archaeological Record
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 bg-primary text-on-primary rounded-r-full font-bold px-4 py-3 font-serif text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+                        Interactive Map
+                    </a>
+</li>
+</ul>
+</nav>
+<!-- Main Map Area -->
+<main class="flex-1 relative md:ml-64 bg-surface-container-lowest overflow-hidden flex">
+<!-- Map Canvas -->
+<div class="absolute inset-0 z-0">
+<img alt="Stylized historical map of the Valley of Mexico" class="w-full h-full object-cover opacity-90 sepia-[.3] contrast-125 saturate-50" data-alt="A highly detailed, stylized historical map of the Valley of Mexico circa 1519. The map features a muted, sepia-toned aesthetic with delicate topographical lines indicating mountains and the central lake system. The visual style mimics an ancient, weathered parchment yet maintains a clean, minimalist digital interface. Soft, ambient lighting highlights the intricate waterways and causeways, creating an academic and immersive atmosphere." data-location="Valley of Mexico" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlHegXXubCX1d6mHKtOshP1819FEXMFckOVDOK0n9rdwXI2rL6pThbmEcHKYvrOrIYMWi4D2d8BKpfHF4rogAiLjNENnXmSZphGOzJVWm_IzASrGphbvuFfHxFFe8ec753krC7NVEq3HuC7GVCQbnPU2oa0yMwmkO-VteLe4ykucHrdOZWmSGwJNLVLDo_9p_ocr0NROSIbNAYtou5Bw8vPgLJ3Egukki8nhoEi5YrrgF11QTqXsVA_x013o2_9WyZjlF51oQPZ4k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<!-- Map Controls Overlay -->
+<div class="absolute bottom-8 right-8 z-20 flex flex-col gap-2 bg-[#EAD7B1]/90 backdrop-blur-sm p-2 rounded shadow-sm border border-outline-variant">
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors rounded">
+<span class="material-symbols-outlined">add</span>
+</button>
+<div class="w-full h-px bg-outline-variant"></div>
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors rounded">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<div class="w-full h-px bg-outline-variant"></div>
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors rounded">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+<!-- Interactive Pins -->
+<button aria-label="Tenochtitlan" class="absolute top-[45%] left-[48%] z-10 w-8 h-8 -ml-4 -mt-4 text-primary drop-shadow-md hover:scale-110 transition-transform group focus:outline-none">
+<span class="material-symbols-outlined text-[32px] group-hover:text-primary-container" data-weight="fill">location_on</span>
+<span class="absolute top-8 left-1/2 -translate-x-1/2 whitespace-nowrap font-label-sm text-label-sm bg-[#EAD7B1]/90 backdrop-blur px-2 py-1 rounded shadow-sm border border-outline-variant text-primary mt-1 opacity-0 group-hover:opacity-100 transition-opacity">Tenochtitlan</span>
+</button>
+<button aria-label="Tlatelolco" class="absolute top-[42%] left-[47%] z-10 w-6 h-6 -ml-3 -mt-3 text-primary/80 drop-shadow-sm hover:scale-110 transition-transform group focus:outline-none">
+<span class="material-symbols-outlined text-[24px] group-hover:text-primary-container">push_pin</span>
+</button>
+<button aria-label="Texcoco" class="absolute top-[38%] left-[60%] z-10 w-6 h-6 -ml-3 -mt-3 text-primary/80 drop-shadow-sm hover:scale-110 transition-transform group focus:outline-none">
+<span class="material-symbols-outlined text-[24px] group-hover:text-primary-container">push_pin</span>
+</button>
+<!-- Active Context Sidebar (Bento/Glassmorphism style) -->
+<aside class="absolute top-0 right-0 h-full w-full max-w-md bg-[#EAD7B1]/95 backdrop-blur-md border-l border-outline-variant shadow-2xl z-30 flex flex-col translate-x-0 transition-transform duration-500 ease-in-out">
+<!-- Sidebar Header -->
+<div class="flex justify-between items-center p-gutter border-b border-outline-variant">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Capital City</span>
+</div>
+<button aria-label="Close sidebar" class="text-primary hover:text-primary/80 transition-colors focus:outline-none">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Sidebar Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-gutter flex flex-col gap-6">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-2">Tenochtitlan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Founded in 1325 on an island in Lake Texcoco, Tenochtitlan grew into the dominant power of the Aztec Empire. At its peak in 1519, it was one of the largest cities in the world, renowned for its complex system of canals, causeways, and monumental architecture.
+                        </p>
+</div>
+<!-- Bento Grid for Media -->
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 aspect-video rounded-lg overflow-hidden border border-outline-variant relative group cursor-pointer">
+<img alt="Reconstruction of the Templo Mayor" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A highly detailed architectural rendering of the Templo Mayor in Tenochtitlan, depicted during a bright midday. The massive twin-pyramid structure dominates the frame, showcasing intricate stonework and vibrant painted details in reds and blues. The scene is set against a clear blue sky, exuding a sense of monumental scale and historical grandeur, consistent with a refined, academic visual aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEqZjtcaEnbkGnnYQwLfrQjN69N19qV1fscNTwQfN_iCa9aW-mYnvyfaDpunu2cu1n4grDp9WCJdscyBMFUXmcjjw1WSOuwkrrmDXydCXTCyTFCkoO-CzGWD04TSpR1HrwpbFN_mM7EGEibVVcbzdQiYmm6vrQ1dTTZJbj_QXoILjkwwNEuU-bxC4ay76u4WDTusmwanr1tPOL_MIdRVUW7Y-vluZNyeG9gofZM52c8xbHOj37lRzSoQcIam2UrY3woGlJ-R0QE4w"/>
+<div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black/80 to-transparent">
+<span class="text-white font-label-sm text-label-sm">The Great Temple</span>
+</div>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border border-outline-variant relative group cursor-pointer">
+<img alt="Artifact from the region" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, high-resolution photograph of a meticulously carved Aztec stone artifact, likely a sun stone fragment. The artifact rests on a clean, neutral white background under soft, studio lighting that highlights the deep recesses of the carving. The minimalist presentation emphasizes the texture and historical significance of the object, aligning with an elegant digital gallery exhibition style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyvHOX7RKyBK-eqG3x1EShmeHy37N_L9yl1zqUh1Z5muOyRN-Y8jZp1DjJMyKdsBDR56nGrSWwhDzseg4b4akmhhL-ScD_jLexydIZ6bnRe_P-QOwpOlP9Is2NHcs7A56svO2q0GLrw8ufAeSdYNpHkIV27LhTT2H1-pK85fCPAcWbdtU8gRJWtxCLD9iQ_VUsQPs_e31sENNgT-6-W7FbTkrkm3KXeD74H1LlanvebdS0mgfWmvwrVZfZPN0wHuAFmDDIQXm3b8w"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border border-outline-variant bg-surface-variant flex flex-col items-center justify-center p-4 text-center group cursor-pointer hover:bg-surface-variant/80 transition-colors">
+<span class="material-symbols-outlined text-[32px] text-primary mb-2">menu_book</span>
+<span class="font-label-sm text-label-sm text-primary">View Primary Sources</span>
+</div>
+</div>
+<!-- Metadata Tags -->
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm">Population: ~200,000</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm">Founded: 1325</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm">Island Settlement</span>
+</div>
+<!-- Call to Action -->
+<div class="mt-auto pt-6 border-t border-outline-variant">
+<button class="w-full py-3 px-4 bg-primary text-on-primary rounded font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-2">
+                            Enter the City
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</aside>
+</main>
+</div>
+</body></html>

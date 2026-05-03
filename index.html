@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Narrativa digital interactiva sobre México-Tenochtitlan, su esplendor lacustre y la caída de 1521.">
+  <title>Tenochtitlan: la ciudad que cayó de pie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300..500,0..1&amp;family=Noto+Serif:ital,wght@0,500;0,600;0,700;1,500&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js-ready");</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="topbar" id="topbar">
+<a class="brand" href="#inicio" aria-label="Ir al inicio">
+  <span class="brand-mark" aria-hidden="true"></span>
+  <span>Tenochtitlan: la ciudad que cayó de pie</span>
+</a>
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir índice" aria-expanded="false" aria-controls="mobileMenu">
+  <span class="menu-icon" aria-hidden="true"></span>
+  <span>Índice</span>
+</button>
+  </header>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="mobile-panel" id="mobileMenu" aria-label="Índice de crónica">
+<div class="drawer-heading">
+  <span>Recorrido</span>
+  <strong>Índice de crónica</strong>
+</div>
+<nav>
+  <a href="#origen"><span class="material-symbols-outlined">explore</span>Origen</a>
+  <a href="#linea"><span class="material-symbols-outlined">timeline</span>Línea del tiempo</a>
+  <a href="#ciudad"><span class="material-symbols-outlined">water</span>Ciudad lacustre</a>
+  <a href="#poder"><span class="material-symbols-outlined">account_balance</span>Poder</a>
+  <a href="#encuentro"><span class="material-symbols-outlined">groups</span>Encuentro</a>
+  <a href="#sitio"><span class="material-symbols-outlined">history_edu</span>Sitio</a>
+  <a href="#mapa"><span class="material-symbols-outlined">map</span>Mapa</a>
+  <a href="#galeria"><span class="material-symbols-outlined">collections_bookmark</span>Objetos</a>
+  <a href="#legado"><span class="material-symbols-outlined">location_city</span>Legado</a>
+</nav>
+  </aside>
+
+  <main class="main" id="inicio">
+<section class="hero" data-section="inicio">
+  <div class="hero-visual" data-parallax="0.18" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <h1 class="reveal">México-Tenochtitlan: la ciudad que cayó de pie</h1>
+  </div>
+</section>
+
+<section class="section" id="origen" data-section="origen">
+  <div class="content intro-grid">
+    <article class="prose reveal">
+      <span class="eyebrow">Apertura</span>
+      <h2>Primero fue el agua. Luego, la decisión de habitarla.</h2>
+      <p class="lead dropcap">La tradición cuenta que los mexicas llegaron al centro de la cuenca después de una larga migración desde Aztlan y Chicomóztoc. No encontraron un valle vacío ni una tierra dócil: encontraron islotes, pantanos, aguas salobres, pueblos ya establecidos y una promesa difícil de obedecer.</p>
+      <p class="body-copy">Allí, en el lago de Texcoco, fundaron México-Tenochtitlan en 1325. Lo que parecía un margen se volvió estrategia. El agua fue defensa, camino, frontera y despensa. La isla creció con rellenos, chinampas, calzadas, puentes y canales; cada obra transformó el paisaje en una forma de poder.</p>
+      <p class="body-copy">Por eso la caída de 1521 no puede contarse sólo desde el momento de la guerra. Para entenderla hay que mirar primero la ciudad entera: sus barrios, escuelas, jueces, sacerdotes, pochtecas, artesanos, agricultores, guerreros y mercados. Una capital que respiraba al ritmo del lago.</p>
+    </article>
+
+    <aside class="fact-panel reveal">
+      <h3>Ficha de sala</h3>
+      <ul class="fact-list">
+        <li><strong>Nombre histórico</strong><span>México-Tenochtitlan; sus habitantes fueron mexicas o tenochcas.</span></li>
+        <li><strong>Fundación tradicional</strong><span>1325, sobre islotes del lago de Texcoco.</span></li>
+        <li><strong>Centro simbólico</strong><span>Templo Mayor, dedicado a Huitzilopochtli y Tláloc.</span></li>
+        <li><strong>Caída militar</strong><span>13 de agosto de 1521, tras el sitio de Tenochtitlan-Tlatelolco.</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-band" id="linea" data-section="linea">
+  <div class="content">
+    <span class="eyebrow reveal">Línea del tiempo</span>
+    <h2 class="reveal">La ciudad no cayó en un día; se construyó durante dos siglos.</h2>
+    <div class="timeline-shell reveal">
+      <div class="timeline-buttons" id="timelineButtons" aria-label="Acontecimientos históricos"></div>
+      <article class="timeline-card" id="timelineCard" aria-live="polite">
+        <div class="timeline-copy">
+          <span class="date" id="timelineDate">1325</span>
+          <h3 id="timelineTitle">Fundación de México-Tenochtitlan</h3>
+          <p id="timelineText">La isla se vuelve capital posible. El entorno lacustre, difícil para otros, se convierte en defensa natural, ruta de canoas y base para una ciudad que crecerá sobre el agua.</p>
+        </div>
+        <div class="image-placeholder" id="timelineImage" data-label="Placeholder: fundación de Tenochtitlan"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ciudad" data-section="ciudad">
+  <div class="content">
+    <span class="eyebrow reveal">Ciudad lacustre</span>
+    <h2 class="reveal">Una capital que funcionaba como máquina hidráulica, agrícola y ceremonial.</h2>
+    <div class="systems-grid">
+      <div class="reveal">
+        <div class="tabs" role="tablist" aria-label="Sistemas de la ciudad">
+          <button class="tab is-active" role="tab" aria-selected="true" aria-controls="tab-agua" data-tab="agua"><span class="material-symbols-outlined">water_drop</span>Agua</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-chinampas" data-tab="chinampas"><span class="material-symbols-outlined">grass</span>Chinampas</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-mercado" data-tab="mercado"><span class="material-symbols-outlined">storefront</span>Mercado</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-templo" data-tab="templo"><span class="material-symbols-outlined">temple_buddhist</span>Templo</button>
+        </div>
+
+        <article class="tab-panel is-active" id="tab-agua" role="tabpanel" data-panel="agua">
+          <h3>Agua dulce contra agua salobre</h3>
+          <p class="body-copy">El lago rodeaba a la ciudad, pero no todo podía beberse. Tenochtitlan dependía de manantiales como los de Chapultepec y de obras capaces de conducir, separar y defender el agua. Dique, calzada, canal y acueducto fueron piezas de una misma inteligencia urbana.</p>
+        </article>
+        <article class="tab-panel" id="tab-chinampas" role="tabpanel" data-panel="chinampas">
+          <h3>La tierra inventada</h3>
+          <p class="body-copy">Las chinampas ampliaron el suelo cultivable con vegetación acuática, limo y sedimentos. Allí crecían maíz, chile, amaranto, calabaza, chía, nopal y otros alimentos que sostenían barrios enteros.</p>
+        </article>
+        <article class="tab-panel" id="tab-mercado" role="tabpanel" data-panel="mercado">
+          <h3>Tlatelolco, la plaza que respiraba el imperio</h3>
+          <p class="body-copy">El mercado de Tlatelolco reunió productos cotidianos y bienes de prestigio. Pochtecas, jueces, cargadores, artesanos y compradores formaban una coreografía de intercambio que impresionó incluso a los cronistas españoles.</p>
+        </article>
+        <article class="tab-panel" id="tab-templo" role="tabpanel" data-panel="templo">
+          <h3>El centro del mundo mexica</h3>
+          <p class="body-copy">El Templo Mayor no era sólo arquitectura. Sus adoratorios a Huitzilopochtli y Tláloc condensaban guerra y agricultura, conquista y lluvia, poder político y continuidad cósmica.</p>
+        </article>
+
+        <div class="metric-grid">
+          <div class="metric"><strong>3</strong><span>calzadas principales hacia tierra firme</span></div>
+          <div class="metric"><strong>2</strong><span>ciudades gemelas: Tenochtitlan y Tlatelolco</span></div>
+          <div class="metric"><strong>5</strong><span>lagos en la cuenca histórica</span></div>
+          <div class="metric"><strong>1</strong><span>recinto sagrado en el corazón político</span></div>
+        </div>
+      </div>
+      <div class="image-placeholder reveal" data-label="Placeholder: canales, chinampas y calzadas"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-band" id="poder" data-section="poder">
+  <div class="content">
+    <span class="eyebrow reveal">Imperio en tensión</span>
+    <h2 class="reveal">El esplendor también acumuló enemigos.</h2>
+    <div class="chapter-list">
+      <article class="chapter reveal">
+        <div class="chapter-media image-placeholder" data-label="Placeholder: Templo Mayor y recinto sagrado"></div>
+        <div class="chapter-copy">
+          <span class="chapter-number">Capítulo I</span>
+          <h3>El Templo Mayor: piedra sobre piedra, mundo sobre mundo.</h3>
+          <p class="body-copy">Cuando el templo crecía, no se movía: se cubría la etapa anterior y se levantaba otra encima. Así, cada ampliación era una declaración de permanencia. En su cima, Huitzilopochtli y Tláloc recordaban que el imperio dependía de dos fuerzas inseparables: la guerra que traía tributo y la lluvia que hacía vivir el maíz.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <div class="chapter-media image-placeholder" data-label="Placeholder: tributo, mantas, cacao y plumas"></div>
+        <div class="chapter-copy">
+          <span class="chapter-number">Capítulo II</span>
+          <h3>La Triple Alianza convirtió la ciudad en centro de una red inmensa.</h3>
+          <p class="body-copy">Tras la derrota de Azcapotzalco en 1428, Tenochtitlan, Texcoco y Tlacopan formaron la Triple Alianza. Con el tiempo, Tenochtitlan concentró poder militar, tributo y prestigio. Mantas, cacao, pieles, plumas, alimentos y piedras semipreciosas llegaban a la capital como prueba material de dominio.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <div class="chapter-media image-placeholder" data-label="Placeholder: calpulli, barrios y vida cotidiana"></div>
+        <div class="chapter-copy">
+          <span class="chapter-number">Capítulo III</span>
+          <h3>El calpulli sostuvo la ciudad desde abajo.</h3>
+          <p class="body-copy">El barrio no era sólo vecindad: era tierra compartida, culto, obligación, escuela, trabajo colectivo y memoria. Mientras la élite decidía campañas y ceremonias, familias enteras sembraban, remaban, vendían, cocinaban, aprendían oficios y cumplían tributos.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="quote-band" id="encuentro" data-section="encuentro">
+  <div class="image-placeholder" data-parallax="0.12" data-label=""></div>
+  <div class="quote-content reveal">
+    <blockquote>El 8 de noviembre de 1519, la calzada se volvió escenario.</blockquote>
+    <p>Cortés y sus aliados indígenas entraron a la ciudad. Moctezuma Xocoyotzin los recibió con protocolo, cálculo y tensión. Nada de lo que siguió fue inevitable, pero todo quedó marcado por ese encuentro.</p>
+  </div>
+</section>
+
+<section class="section" data-section="encuentro-detalle">
+  <div class="narrow prose reveal">
+    <span class="eyebrow">1519-1520</span>
+    <h2>La grieta se abrió entre palabras traducidas, alianzas cambiantes y violencia.</h2>
+    <p class="lead">La llegada española no fue una marcha solitaria. Cortés avanzó gracias a alianzas indígenas con pueblos que veían en el poder mexica una carga tributaria, una amenaza o una oportunidad política. La conquista fue, también, una guerra mesoamericana.</p>
+    <p class="body-copy">En Tenochtitlan, la relación se volvió crisis: captura de Moctezuma, tensiones dentro de la ciudad, muerte del tlatoani, salida violenta de los españoles y reorganización de la resistencia. En 1520, la viruela añadió otro golpe: Cuitláhuac, sucesor de Moctezuma, murió durante la epidemia.</p>
+    <p class="body-copy">Entonces Cuauhtémoc asumió el mando. No heredó una ciudad intacta, sino una capital herida que todavía tenía puentes, canales, guerreros, barrios y voluntad de resistir.</p>
+  </div>
+</section>
+
+<section class="section section-band" id="sitio" data-section="sitio">
+  <div class="content">
+    <span class="eyebrow reveal">Mayo-agosto de 1521</span>
+    <h2 class="reveal">El sitio convirtió la ciudad acuática en una trampa de hambre.</h2>
+    <div class="scrolly">
+      <div class="scrolly-visual reveal" aria-hidden="true">
+        <div class="image-placeholder" id="siegeVisual" data-label="Placeholder: sitio de Tenochtitlan y combates en canales"></div>
+        <div class="siege-status">
+          <span id="siegeDate">Mayo de 1521</span>
+          <span id="siegePhase">Bloqueo</span>
+        </div>
+      </div>
+      <div class="scrolly-steps">
+        <article class="step is-active" data-date="Mayo de 1521" data-phase="Bloqueo">
+          <strong>Primero, cortar las redes.</strong>
+          <p>Las calzadas fueron frentes de guerra. Los bergantines permitieron atacar desde el lago. Rutas de abasto, puentes y canales dejaron de ser ventaja y se volvieron puntos vulnerables.</p>
+        </article>
+        <article class="step" data-date="Junio de 1521" data-phase="Agua">
+          <strong>Después, cortar el agua.</strong>
+          <p>Una ciudad rodeada de agua podía morir de sed. El bloqueo redujo el acceso a agua potable y alimentos; la ingeniería que había sostenido la vida empezó a fallar bajo presión militar.</p>
+        </article>
+        <article class="step" data-date="Julio de 1521" data-phase="Tlatelolco">
+          <strong>La resistencia se apretó hacia Tlatelolco.</strong>
+          <p>El mercado que había simbolizado abundancia se volvió último bastión. Entre hambre, enfermedad y combate urbano, Cuauhtémoc y la población resistieron casa por casa, canal por canal.</p>
+        </article>
+        <article class="step" data-date="13 de agosto de 1521" data-phase="Caída">
+          <strong>La captura de Cuauhtémoc cerró la guerra militar.</strong>
+          <p>En Coyonacazco, actual Tepito, Cuauhtémoc fue capturado. La caída de Tenochtitlan-Tlatelolco no borró la ciudad: la hundió bajo otra capital, dejando sus capas bajo el Centro Histórico.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mapa" data-section="mapa">
+  <div class="content">
+    <span class="eyebrow reveal">Valle de México</span>
+    <h2 class="reveal">Toca un punto del mapa y cambia la lectura del valle.</h2>
+    <div class="map-grid reveal">
+      <div class="map-stage" aria-label="Mapa interactivo estilizado del valle de México">
+        <div class="map-canvas" id="mapCanvas">
+          <button class="map-pin is-active" style="left: 49%; top: 49%;" data-place="tenochtitlan" data-title="Tenochtitlan" aria-label="Tenochtitlan"><span class="material-symbols-outlined">location_on</span></button>
+          <button class="map-pin" style="left: 47%; top: 43%;" data-place="tlatelolco" data-title="Tlatelolco" aria-label="Tlatelolco"><span class="material-symbols-outlined">push_pin</span></button>
+          <button class="map-pin" style="left: 34%; top: 51%;" data-place="chapultepec" data-title="Chapultepec" aria-label="Chapultepec"><span class="material-symbols-outlined">push_pin</span></button>
+          <button class="map-pin" style="left: 58%; top: 70%;" data-place="iztapalapa" data-title="Iztapalapa" aria-label="Iztapalapa"><span class="material-symbols-outlined">push_pin</span></button>
+          <button class="map-pin" style="left: 24%; top: 44%;" data-place="tlacopan" data-title="Tlacopan" aria-label="Tlacopan"><span class="material-symbols-outlined">push_pin</span></button>
+          <button class="map-pin" style="left: 72%; top: 38%;" data-place="texcoco" data-title="Texcoco" aria-label="Texcoco"><span class="material-symbols-outlined">push_pin</span></button>
+        </div>
+        <div class="map-controls">
+          <button class="icon-button" id="zoomIn" aria-label="Acercar mapa"><span class="material-symbols-outlined">add</span></button>
+          <button class="icon-button" id="zoomOut" aria-label="Alejar mapa"><span class="material-symbols-outlined">remove</span></button>
+          <button class="icon-button" id="zoomReset" aria-label="Recentrar mapa"><span class="material-symbols-outlined">my_location</span></button>
+        </div>
+      </div>
+      <aside class="map-panel" id="mapPanel" aria-live="polite">
+        <span class="tag">Capital lacustre</span>
+        <h3>Tenochtitlan</h3>
+        <p class="body-copy">Fundada tradicionalmente en 1325, fue isla, puerto, santuario, mercado y centro político. Desde aquí se articulaban calzadas, canales, barrios, tributo y ceremonias imperiales.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section-band" id="galeria" data-section="galeria">
+  <div class="content">
+    <span class="eyebrow reveal">Galería editable</span>
+    <h2 class="reveal">Objetos para contar la historia sin cerrar la interpretación.</h2>
+    <div class="gallery-grid reveal" id="galleryGrid">
+      <button class="artifact" data-artifact="coyolxauhqui">
+        <span class="image-placeholder" data-label="Placeholder: escultura de Coyolxauhqui"></span>
+        <span class="artifact-info"><strong>Coyolxauhqui</strong><span>Mito, guerra y memoria del Templo Mayor</span></span>
+      </button>
+      <button class="artifact" data-artifact="piedra">
+        <span class="image-placeholder" data-label="Placeholder: Piedra del Sol"></span>
+        <span class="artifact-info"><strong>Piedra del Sol</strong><span>Tiempo, cosmos y legitimación</span></span>
+      </button>
+      <button class="artifact" data-artifact="codice">
+        <span class="image-placeholder" data-label="Placeholder: códice o manuscrito"></span>
+        <span class="artifact-info"><strong>Códices</strong><span>Memoria visual y escritura indígena</span></span>
+      </button>
+      <button class="artifact" data-artifact="acueducto">
+        <span class="image-placeholder" data-label="Placeholder: acueducto de Chapultepec"></span>
+        <span class="artifact-info"><strong>Agua de Chapultepec</strong><span>Infraestructura para sobrevivir</span></span>
+      </button>
+      <button class="artifact" data-artifact="mercado">
+        <span class="image-placeholder" data-label="Placeholder: mercado de Tlatelolco"></span>
+        <span class="artifact-info"><strong>Tlatelolco</strong><span>Abundancia y último bastión</span></span>
+      </button>
+      <button class="artifact" data-artifact="bergantines">
+        <span class="image-placeholder" data-label="Placeholder: bergantines en el lago"></span>
+        <span class="artifact-info"><strong>Bergantines</strong><span>El lago convertido en frente militar</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="legado" data-section="legado">
+  <div class="content intro-grid">
+    <article class="prose reveal">
+      <span class="eyebrow">Cierre</span>
+      <h2>La ciudad cayó, pero no desapareció.</h2>
+      <p class="lead">Después de 1521, la capital colonial se levantó sobre templos, palacios, canales y barrios mexicas. Bajo el Centro Histórico de la Ciudad de México siguieron respirando capas de piedra, agua y memoria.</p>
+      <p class="body-copy">Tenochtitlan permanece en nombres como Chapultepec, Tacuba, Coyoacán, Iztapalapa, Tlatelolco y Tepeyac. También vive en el náhuatl, en alimentos, en el símbolo del águila y el nopal, y en las preguntas abiertas sobre conquista, resistencia e identidad.</p>
+      <p class="body-copy">Contarla como una caída no basta. Fue una ciudad que convirtió el lago en arquitectura, el tributo en poder, el mercado en mundo, el templo en centro del cosmos y la resistencia en memoria.</p>
+    </article>
+    <aside class="fact-panel reveal">
+      <h3>Fuentes integradas</h3>
+      <p class="body-copy">La narrativa se estructuró a partir del documento de investigación del proyecto y sus fuentes institucionales y académicas.</p>
+    </aside>
+  </div>
+
+  <div class="content sources reveal">
+    <details>
+      <summary>Fuentes principales de la investigación</summary>
+      <div>
+        <a href="https://e1.portalacademico.cch.unam.mx/alumno/historiademexico1/unidad2/culturamexica/mexicotenochtitlan" target="_blank" rel="noreferrer">Portal Académico CCH UNAM: México-Tenochtitlán</a>
+        <a href="https://www.templomayor.inah.gob.mx/historia/zona-arqueologica-del-templo-mayor" target="_blank" rel="noreferrer">Museo del Templo Mayor, INAH: Zona Arqueológica del Templo Mayor</a>
+        <a href="https://arqueologiamexicana.mx/mexico-antiguo/el-mercado-de-tlatelolco" target="_blank" rel="noreferrer">Arqueología Mexicana: El mercado de Tlatelolco</a>
+        <a href="https://www.inah.gob.mx/foto-del-dia/1521-tlatelolco-el-ultimo-bastion-mexica" target="_blank" rel="noreferrer">INAH: Tlatelolco, último bastión mexica</a>
+        <a href="https://www.nuevaescuelamexicana.sep.gob.mx/contenido/coleccion/la-caida-de-tenochtitlan-2/" target="_blank" rel="noreferrer">Nueva Escuela Mexicana, SEP: La caída de Tenochtitlan</a>
+      </div>
+    </details>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer">
+<div class="footer-inner">
+  <span>Proyecto escolar de narrativa histórica digital. Mayo de 2026.</span>
+  <span>Diseño inspirado en una experiencia editorial tipo Google Arts & Culture.</span>
+</div>
+  </footer>
+
+  <div class="modal" id="artifactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-card">
+  <div class="image-placeholder" id="modalImage" data-label="Placeholder de objeto"></div>
+  <div class="modal-copy">
+    <div class="modal-actions">
+      <button class="close-modal" id="closeModal" aria-label="Cerrar visor"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <span class="eyebrow" id="modalTag">Objeto</span>
+    <h3 id="modalTitle">Objeto</h3>
+    <p class="body-copy" id="modalText">Descripción del objeto.</p>
+  </div>
+</div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

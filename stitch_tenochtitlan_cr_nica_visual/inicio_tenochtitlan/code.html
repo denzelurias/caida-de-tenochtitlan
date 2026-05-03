@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tenochtitlan: The Fall</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary-fixed": "#000767",
+                "surface-dim": "#efd4d0",
+                "on-secondary-fixed-variant": "#343d96",
+                "surface-container-low": "#fff0ee",
+                "surface-container": "#ffe9e6",
+                "on-primary-fixed-variant": "#920703",
+                "inverse-primary": "#ffb4a8",
+                "primary-container": "#8b0000",
+                "background": "#fff8f6",
+                "inverse-on-surface": "#ffedea",
+                "on-surface": "#261816",
+                "primary": "#610000",
+                "primary-fixed": "#ffdad4",
+                "secondary-fixed": "#e0e0ff",
+                "on-background": "#261816",
+                "secondary": "#4c56af",
+                "on-error-container": "#93000a",
+                "surface-bright": "#fff8f6",
+                "surface": "#fff8f6",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#dfe0ff",
+                "on-secondary-container": "#27308a",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed": "#000d60",
+                "on-primary-container": "#ff907f",
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#959efd",
+                "on-secondary": "#ffffff",
+                "surface-container-highest": "#f8dcd8",
+                "on-tertiary-fixed-variant": "#0d2ccc",
+                "on-tertiary-container": "#9ea9ff",
+                "secondary-fixed-dim": "#bdc2ff",
+                "on-primary-fixed": "#410000",
+                "on-primary": "#ffffff",
+                "outline-variant": "#e3beb8",
+                "inverse-surface": "#3d2c2a",
+                "surface-container-high": "#fee2dd",
+                "surface-variant": "#f8dcd8",
+                "tertiary-container": "#0025c8",
+                "tertiary": "#00178d",
+                "primary-fixed-dim": "#ffb4a8",
+                "on-surface-variant": "#5a403c",
+                "tertiary-fixed-dim": "#bcc3ff",
+                "outline": "#8e706b",
+                "on-tertiary": "#ffffff",
+                "surface-tint": "#b52619"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "section-gap": "120px",
+                "gutter": "32px",
+                "margin-edge": "64px",
+                "unit": "8px",
+                "container-max": "1280px"
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "Noto Serif"
+                ],
+                "body-lg": [
+                        "Work Sans"
+                ],
+                "headline-display": [
+                        "Noto Serif"
+                ],
+                "headline-md": [
+                        "Noto Serif"
+                ],
+                "label-sm": [
+                        "Work Sans"
+                ],
+                "body-md": [
+                        "Work Sans"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-display": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        [data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#EAD7B1] text-on-background font-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<nav class="bg-[#EAD7B1] dark:bg-stone-950 flex justify-between items-center w-full px-8 py-4 sticky top-0 z-50 docked full-width top-0 border-b border-outline-variant flat no-shadows">
+<div class="font-headline-md text-headline-md text-primary tracking-wide">Tenochtitlan: The Fall</div>
+<div class="hidden md:flex space-x-6 items-center">
+<a class="text-primary border-b border-primary pb-1 font-body-md tracking-wide hover:text-primary/80 transition-colors duration-300 Active: opacity-70 transition-opacity" href="#">Timeline</a>
+<a class="text-on-surface-variant font-body-md tracking-wide hover:text-primary transition-colors duration-300" href="#">Empire</a>
+<a class="text-on-surface-variant font-body-md tracking-wide hover:text-primary transition-colors duration-300" href="#">The Siege</a>
+<a class="text-on-surface-variant font-body-md tracking-wide hover:text-primary transition-colors duration-300" href="#">Legacy</a>
+</div>
+<div class="flex items-center space-x-4 text-primary">
+<button class="hover:text-primary/80 transition-colors duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="translate">translate</span>
+</button>
+<button class="hover:text-primary/80 transition-colors duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- SideNavBar (Hidden on Mobile per rules, present for md+ layout) -->
+<aside class="bg-[#EAD7B1] dark:bg-stone-900 h-full w-64 border-r rounded-none border-outline-variant flat fixed left-0 top-0 z-40 hidden md:flex flex-col pt-20">
+<div class="px-6 py-8">
+<h2 class="font-headline-md text-headline-md text-primary">Chronicle Index</h2>
+<p class="font-body-md text-sm uppercase tracking-widest text-on-surface-variant mt-2 opacity-70">An Academic Digital Narrative</p>
+</div>
+<nav class="flex-1 flex flex-col space-y-2 pr-4 pl-2 mt-4">
+<a class="bg-primary text-on-primary rounded-r-full font-bold flex items-center space-x-3 px-4 py-3 hover:bg-primary/90 transition-all scale-x-105 origin-left transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="castle">castle</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">The Mexica Empire</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center space-x-3 hover:bg-primary/10 hover:text-primary rounded-r-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="sailing">sailing</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Spanish Arrival</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center space-x-3 hover:bg-primary/10 hover:text-primary rounded-r-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Broken Spears</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center space-x-3 hover:bg-primary/10 hover:text-primary rounded-r-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Archaeological Record</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center space-x-3 hover:bg-primary/10 hover:text-primary rounded-r-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Interactive Map</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 w-full md:w-[calc(100%-16rem)] min-h-screen">
+<!-- Hero Section -->
+<section class="relative w-full h-[819px] flex items-center justify-center overflow-hidden bg-surface-container-highest">
+<img alt="Hero Image" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A sweeping, highly detailed historical illustration of the vast Aztec city of Tenochtitlan set amidst Lake Texcoco. The scene is bathed in golden hour sunlight, casting long, dramatic shadows across massive stepped pyramids, intricate causeways, and bustling marketplaces. The aesthetic is academic and classical, rendered in high-resolution with a muted, earthy color palette of terracottas, deep greens, and soft blues, perfectly suited for a premium digital gallery interface. The mood is majestic yet melancholic, hinting at an empire at its peak just before its fall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqI1FFeKKSUISnTktVbjxmZlc4i0dR3c86J1KOkEU1_9OiDj16l5ir4dxEWdoJyQBQeSEYqSRqnNpgnks83SRG6C1Rka4EiggkkjSmzGirqqKib3rH9nBn6Ilen1TO_GP6mwBPAJsh8oSfpM51on-_XbujQVOqPTPdcuWNBZ8Uz3wG9r5nSVTY_eOFsWC1FdguNFqo580MNjjZ1cwTyu8OoGzhfDBoqPRopp2Y7HD8eP9HJ5BpOonxj1ihR2sIzDyq1Lm-Dk6KgVY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#EAD7B1] to-transparent"></div>
+<div class="relative z-10 max-w-4xl px-margin-edge text-center">
+<h1 class="font-headline-display text-headline-display text-primary mb-8">Tenochtitlan: The Fall</h1>
+<p class="font-body-lg text-body-lg text-on-surface max-w-2xl mx-auto font-medium">An academic digital narrative exploring the peak of the Mexica Empire, the arrival of the Spanish, and the tragic siege that reshaped the Americas.</p>
+</div>
+</section>
+<!-- The Mexica Empire Section (Bento Grid) -->
+<section class="py-section-gap px-margin-edge max-w-7xl mx-auto">
+<div class="mb-12">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Chapter I</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Mexica Empire</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Featured Card -->
+<article class="col-span-1 md:col-span-8 bg-[#EAD7B1] border border-outline-variant rounded-xl overflow-hidden group">
+<div class="h-[400px] overflow-hidden relative">
+<img alt="Aztec Artifact" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A close-up, high-resolution photograph of a meticulously carved Aztec stone artifact, possibly a calendar or a deity figure, resting in a minimalist museum setting. The lighting is focused and dramatic, highlighting the deep relief carvings and the porous texture of the volcanic rock against a pure white background. The aesthetic is clean, academic, and modern, reflecting a high-end digital gallery style. The color palette is strictly neutral, emphasizing shadows and highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr4JS-0EAJtBKzC-hrpYU4-jzIknOXCAFT7dLZs9thV-qcFV7tHJboBBEQqYSKZKGxPBrBSDjzj6Lcyd0jPz0Qfxvspf6xyFR1PJzXoxnPbHqO92AG7Fs-S90R4MpDrnLemYRaen9Ks6vgOZ4U2wkWr9yq8THc0tTzTfECTgTocTT1oeX_x3toNh8bYNMjGPxSbtD76hXKM7DSUuappuhafD9LeZyh7b0JkFWqL4vuJTNQHj3k1bIFqkM1ZfpO3YSDoToZR11a_e8"/>
+</div>
+<div class="p-8">
+<div class="flex space-x-2 mb-4">
+<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm rounded-full">Culture</span>
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Architecture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">A City on the Lake</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Explore the engineering marvels of the chinampas and the intricate canal systems that sustained a population of hundreds of thousands in the Valley of Mexico.</p>
+</div>
+</article>
+<!-- Side Cards -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-gutter">
+<article class="flex-1 bg-[#EAD7B1] border border-outline-variant rounded-xl p-6">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-weight="fill">account_balance</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Templo Mayor</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">The spiritual and physical center of the Aztec universe, dedicated to Huitzilopochtli and Tlaloc.</p>
+</article>
+<article class="flex-1 bg-primary-container text-on-primary-container rounded-xl p-6">
+<span class="material-symbols-outlined text-on-primary text-4xl mb-4">group</span>
+<h4 class="font-headline-md text-headline-md text-on-primary mb-2">Social Hierarchy</h4>
+<p class="font-body-md text-body-md text-on-primary-container opacity-90 text-sm">From the Hueyi Tlatoani to the commoners, understand the strict social stratification that governed daily life.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- The Arrival of the Spanish (Asymmetric Layout) -->
+<section class="py-section-gap px-margin-edge bg-surface-container-low border-y border-outline-variant">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-[4rem]">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Chapter II</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">The Arrival of the Spanish</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-4">In 1519, Hernán Cortés and his expedition arrived on the Gulf Coast. Their march inland was marked by shifting alliances, profound misunderstandings, and the introduction of devastating new diseases.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">The encounter between Moctezuma II and Cortés remains one of the most debated and pivotal moments in history, a collision of two entirely distinct worlds.</p>
+<button class="px-6 py-3 border border-outline text-on-surface font-headline-md text-[18px] rounded hover:bg-surface-container-highest transition-colors">
+                        Read the Chronicles
+                    </button>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 relative">
+<div class="aspect-[3/4] rounded-lg overflow-hidden border border-outline-variant shadow-sm relative z-10">
+<img alt="Spanish Armor" class="w-full h-full object-cover" data-alt="A stark, minimalist photograph of a 16th-century Spanish conquistador's morion helmet and breastplate displayed against a pure, textured off-white background. The lighting is studio-quality, casting sharp, definitive shadows that emphasize the cold, unyielding metallic surface of the armor. The aesthetic is purely academic and curatorial, fitting a high-end digital museum exhibit. The palette is monochromatic silver and steel contrasting with the warm white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo3rzRg-MNfnnObfcKgWl6Qm_CqPeKq_bwl38kNsN8OW9BmcnTh-A2m0yZBW31_JiGMTersKcQDMkR5bYrPt0ga5rIwFzYc-m7HWhcj2sxbYDz4j2pATXCXvCBiNWyg3dZS8iM_P3FOXYV6_-hC9NREGyMVza2KMUJowhi1auaHrTBF4pfSC_q6pTqKzP5VKvkVFRfF6RSldrFDpJO5bIusV_V4lZH7aTDZP1qzhVe7-qOM7mDE_I48NnushrNhT7CJiwItOOekZw"/>
+</div>
+<!-- Decorative background element for asymmetry -->
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-secondary-container rounded-full opacity-20 -z-10 blur-2xl"></div>
+</div>
+</div>
+</section>
+<!-- The Final Siege (Immersive Scroller simulation) -->
+<section class="py-section-gap">
+<div class="max-w-7xl mx-auto px-margin-edge text-center mb-8">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Chapter III</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Final Siege</h2>
+</div>
+<!-- Full width image break -->
+<div class="w-full h-[614px] relative mb-8">
+<img alt="Ruins" class="w-full h-full object-cover grayscale opacity-80" data-alt="A dramatic, wide-angle photograph of ancient Mesoamerican stone ruins crumbling under a moody, overcast sky. The image features a strong vignette effect to draw focus to the massive, weathered blocks of stone in the center. The lighting is low and cinematic, creating a somber, reflective mood suitable for a historical narrative about a fallen empire. The color palette consists of deep, desaturated greys, dark greens from encroaching moss, and leaden blues in the sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw-n0TJbdZtUwcfcT8Mzls2WcERiCCq7kYIYMbQ-kiOHaLu0f4aPNsdq-sl9lps7Za0g3hDyMk5c2LpUdhaz773HcLMYbp03f3pTJKaLNkoEPRPkXmoldZZ0qngjeh0awjomDmvWlG0VTK4yt8yR06TngBc0LDDPli6SKktnarrmWRB-vfJpl-ZM5TvQfzkBFnLDNWUs6ukkFoNrGCTqa1TyRZlZmqTeyubhmVFGmlT37mEFXY5r0P9pbKICyVGQf-Su7d-l8xiIY"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<h3 class="font-headline-display text-headline-display text-white text-center max-w-4xl px-8">"Broken spears lie in the roads; we have torn our hair in our grief."</h3>
+</div>
+</div>
+<div class="max-w-3xl mx-auto px-margin-edge text-center">
+<p class="font-body-lg text-body-lg text-on-surface-variant">After the expulsion of the Spanish during the Noche Triste, Cortés returned with a massive coalition of indigenous allies, primarily the Tlaxcalans. The brutal 93-day siege, exacerbated by a devastating smallpox outbreak, culminated in the fall of Tenochtitlan on August 13, 1521.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#EAD7B1] dark:bg-stone-950 border-t mt-20 border-outline-variant flat w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto md:ml-64 w-full md:w-[calc(100%-16rem)]">
+<p class="text-on-surface-variant font-body-md text-xs italic mb-4 md:mb-0">© 2024 Institute of Historical Narrative. All sources cited via the Florentine Codex.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="font-body-md text-xs italic text-on-surface-variant hover:text-primary transition-colors" href="#">Bibliography</a>
+<a class="font-body-md text-xs italic text-on-surface-variant hover:text-primary transition-colors" href="#">Institutional Partners</a>
+<a class="font-body-md text-xs italic text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Access</a>
+<a class="font-body-md text-xs italic text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+</footer>
+</body></html>
